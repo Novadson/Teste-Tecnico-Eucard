@@ -27,11 +27,14 @@ namespace TesteEucard.DAO
 
             Console.Write($"\nInforme o identificador único:");
             _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
+            if (_ListTransactions.Count > 0 & _ListTransactions.GroupBy(x => x.Identificador).Any(g => g.Count() > 1))
+            {
+                Console.WriteLine("O identificador único informado já existe");
+                _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
+            }
             _transactions.DataDeCriação = DateTime.Now;
             _transactions.ValorParcela = _transactions.ValorTotal.HasValue ? _transactions.ValorTotal / 2 : null;
 
-            if (_ListTransactions.Count > 0 & _ListTransactions.GroupBy(x => x.Identificador).Any(g => g.Count() > 1))
-                Console.WriteLine("O identificador único informado já existe");
             _ListTransactions.Add(_transactions);
             SaveTransactions();
         }
