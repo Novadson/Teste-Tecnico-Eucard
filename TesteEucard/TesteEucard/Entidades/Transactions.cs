@@ -31,7 +31,7 @@ namespace TesteEucard.Entitades
         #endregion PROPRIETY
 
         #region LIST COCREDORES
-        public List<Payments> Cocredores = new List<Payments>();
+        public static List<Payments> Cocredores = new List<Payments>();
         #endregion LIST
 
     }
