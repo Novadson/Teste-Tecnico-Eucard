@@ -1,41 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using TesteEucard.Entitades;
 
 namespace TesteEucard.DAO
 {
     public class TransactionsDAO
     {
-        public static List<Transactions> _list = new List<Transactions>();
-        /*Method SetTransactions*/
-        public static void SetTransactions(Transactions transactions)
+        public static Transactions _transactions = new Transactions();
+        public static List<Transactions> _ListTransactions = new List<Transactions>();
+
+
+        #region SETTRANSACTIONS
+        public static void SetTransactions()
         {
             Console.Write($"Informe o valor da Transação:");
-            transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine());
+            _transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine());
 
-            if (transactions.ValorTotal > 0)
-                transactions.ValorTotal *= 100; /*Valor Total em centavos E Deve ser maior que zero*/
+            if (_transactions.ValorTotal > 0)
+                _transactions.ValorTotal *= 100; /*Valor Total em centavos E Deve ser maior que zero*/
             else
             {
-                Console.WriteLine(transactions.Erromessage);
+                Console.WriteLine(_transactions.Erromessage);
                 return;
             }
 
             Console.Write($"\nInforme o identificador único:");
-            transactions.Identificador = Convert.ToInt32(Console.ReadLine());
+            _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
 
-            transactions.DataDeCriação = DateTime.Now;
+            _transactions.DataDeCriação = DateTime.Now;
 
-            transactions.ValorParcela = transactions.ValorTotal.HasValue ? transactions.ValorTotal / 2 : null;
-
-            SaveTransactions(transactions);
+            _transactions.ValorParcela = _transactions.ValorTotal.HasValue ? _transactions.ValorTotal / 2 : null;
+            _ListTransactions.Add(_transactions);
+            SaveTransactions();
         }
+        #endregion SETTRANSACTIONS
 
-        public static void SaveTransactions(Transactions transactions)
+
+        #region SAVETRANSACTIONS
+        public static bool SaveTransactions()
         {
-            _list.Add(transactions);
+            return _ListTransactions.Count > 0 ? true : false;
         }
+        #endregion SAVETRANSACTIONS
 
     }
 }
