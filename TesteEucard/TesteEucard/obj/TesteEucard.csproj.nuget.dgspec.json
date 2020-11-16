@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\novad\\OneDrive\\Documentos\\Teste-T-cnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj": {}
+    "C:\\Users\\novad\\OneDrive\\Documentos\\Teste Tecnico Eucard\\Teste-Tecnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\novad\\OneDrive\\Documentos\\Teste-T-cnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj": {
+    "C:\\Users\\novad\\OneDrive\\Documentos\\Teste Tecnico Eucard\\Teste-Tecnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste-T-cnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj",
+        "projectUniqueName": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste Tecnico Eucard\\Teste-Tecnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj",
         "projectName": "TesteEucard",
-        "projectPath": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste-T-cnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj",
+        "projectPath": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste Tecnico Eucard\\Teste-Tecnico-Eucard\\TesteEucard\\TesteEucard\\TesteEucard.csproj",
         "packagesPath": "C:\\Users\\novad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste-T-cnico-Eucard\\TesteEucard\\TesteEucard\\obj\\",
+        "outputPath": "C:\\Users\\novad\\OneDrive\\Documentos\\Teste Tecnico Eucard\\Teste-Tecnico-Eucard\\TesteEucard\\TesteEucard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

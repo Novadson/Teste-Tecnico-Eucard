@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TesteEucard.Entidades;
 using TesteEucard.Entitades;
 
 namespace TesteEucard
@@ -8,16 +9,37 @@ namespace TesteEucard
     {
         static void Main(string[] args)
         {
-            Eucard eucard = new Eucard();
+            #region ENTITY
+            /*New Object Transactions*/
+            Transactions transactions = new Transactions();
 
-            for (int i = 0; i < eucard.numberLenght; i++)
-            {
-                Console.WriteLine("Informe um número:");
-                eucard.media.Add(Convert.ToInt32(Console.ReadLine()));
-            }
-            eucard.result = eucard.media.Average();
-            Console.WriteLine($"A media dos valores é:" + eucard.result);
+            /*New Object Cocredores*/
+            Payments cocredores = new Payments();
+            #endregion ENTITY
 
+
+            Console.WriteLine($"Informe o valor da Transação:");
+            transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine());
+
+
+        }
+        /*Metho SetTransactions*/
+        public static Transactions SetTransactions(Transactions transactions)
+        {
+            Console.WriteLine($"Informe o valor da Transação:");
+            if (Convert.ToDecimal(Console.ReadLine()) > 0)
+                transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine()) * 100;
+            else
+                Console.WriteLine("O valor total deve ser maior que zero;");
+
+            Console.WriteLine($"Informe o identificador único:");
+            transactions.Identificador = Convert.ToInt32(Console.ReadLine());
+
+            transactions.DataDeCriação = DateTime.Now;
+
+            transactions.ValorParcela = transactions.ValorTotal.HasValue ? transactions.ValorTotal / 2 : null;
+
+            return transactions;
         }
     }
 }
