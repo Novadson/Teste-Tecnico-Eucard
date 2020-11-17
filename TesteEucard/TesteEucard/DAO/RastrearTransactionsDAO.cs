@@ -14,6 +14,7 @@ namespace TesteEucard.DAO
         List<Payments> listCredorPorTrasacao = new List<Payments>();
         #endregion VARIAVEIS E OBJETOS
 
+        #region RASTREARTRASACTIONANDCREDORES
         public void RastrearTrasactionAndCredores()
         {
             #region LIST E OBJETO
@@ -52,5 +53,6 @@ namespace TesteEucard.DAO
                 throw ex;
             }
         }
+        #endregion RASTREARTRASACTIONANDCREDORES
     }
 }

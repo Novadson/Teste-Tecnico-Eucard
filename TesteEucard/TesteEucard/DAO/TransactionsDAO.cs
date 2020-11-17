@@ -7,9 +7,10 @@ namespace TesteEucard.DAO
 {
     public class TransactionsDAO
     {
+        #region LIST AND OBJECT
         public static Transactions _transactions = new Transactions();
         public static List<Transactions> _ListTransactions = new List<Transactions>();
-
+        #endregion LIST AND OBJECT
 
         #region SETTRANSACTIONS
         public static void SetTransactions()
@@ -34,7 +35,6 @@ namespace TesteEucard.DAO
             SaveTransactions();
         }
         #endregion SETTRANSACTIONS
-
 
         #region SAVETRANSACTIONS
         public static bool SaveTransactions()

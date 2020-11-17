@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using TesteEucard.DAO;
-using TesteEucard.Entidades;
-using TesteEucard.Entitades;
 
 namespace TesteEucard
 {
@@ -11,7 +7,7 @@ namespace TesteEucard
     {
         static void Main(string[] args)
         {
-            /*Set Trasactions*/
+            /*Set Transactions*/
             TransactionsDAO.SetTransactions();
 
             /*SetCredores*/

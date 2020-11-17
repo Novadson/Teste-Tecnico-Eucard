@@ -13,8 +13,7 @@ namespace TesteEucard.DAO
         public const int qtdCredor = 3;
         #endregion OBJECT AND LIST
 
-
-        #region SetCredores
+        #region SETCREDORES
         public static void SetCredores(Transactions transactions)
         {
             Payments _credores = new Payments();
@@ -41,7 +40,7 @@ namespace TesteEucard.DAO
             SavePayments();
             transactions = new Transactions();
         }
-        #endregion SetCredores
+        #endregion SETCREDORES
 
         #region SAVEPAYMENTS
         public static bool SavePayments()
@@ -51,8 +50,7 @@ namespace TesteEucard.DAO
         }
         #endregion SAVEPAYMENTS
 
-
-        #region FazerNovaTrasaction
+        #region FAZERNOVATRASACTION
         public static void FazerNovaTrasaction()
         {
             Console.Write("\n Deseja rastrear a transação feita ou fazer uma nova transação? 1 para rastrear 2 para nova transação:");
@@ -72,6 +70,6 @@ namespace TesteEucard.DAO
                     break;
             }
         }
-        #endregion FazerNovaTrasaction
+        #endregion FAZERNOVATRASACTION
     }
 }
