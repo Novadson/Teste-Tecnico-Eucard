@@ -14,7 +14,7 @@ namespace TesteEucard.DAO
         #region SETTRANSACTIONS
         public static void SetTransactions()
         {
-            Console.Write($"Informe o valor da Transação:");
+            Console.Write($"\nInforme o valor da Transação:");
             _transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine());
 
             if (_transactions.ValorTotal > 0)
@@ -24,17 +24,11 @@ namespace TesteEucard.DAO
                 Console.WriteLine(_transactions.Erromessage);
                 return;
             }
-
             Console.Write($"\nInforme o identificador único:");
             _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
-            if (_ListTransactions.Count > 0 & _ListTransactions.GroupBy(x => x.Identificador).Any(g => g.Count() > 1))
-            {
-                Console.WriteLine("O identificador único informado já existe");
-                _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
-            }
+            ValidarDuplicidade(_transactions.Identificador);
             _transactions.DataDeCriação = DateTime.Now;
             _transactions.ValorParcela = _transactions.ValorTotal.HasValue ? _transactions.ValorTotal / 2 : null;
-
             _ListTransactions.Add(_transactions);
             SaveTransactions();
         }
@@ -44,18 +38,17 @@ namespace TesteEucard.DAO
         #region SAVETRANSACTIONS
         public static bool SaveTransactions()
         {
-            ValidarDuplicidade();
             return _ListTransactions.Count > 0 ? true : false;
         }
 
-        public static void ValidarDuplicidade()
+        public static void ValidarDuplicidade(int Identificador)
         {
-            Console.WriteLine("Deseja fazer uma nova transação? Digite S para SIM/N para NÃO");
-            string resposta = Console.ReadLine();
-            if (resposta.Equals("S"))
-                SetTransactions();
+            if (_ListTransactions.Count > 0 & _ListTransactions.Select(x => x.Identificador).Contains(Identificador))
+            {
+                Console.Write("\nO identificador único informado já existe,informe um outro identificador:");
+                _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
+            }
         }
-
         #endregion SAVETRANSACTIONS
 
     }

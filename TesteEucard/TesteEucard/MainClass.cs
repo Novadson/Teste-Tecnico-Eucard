@@ -11,25 +11,19 @@ namespace TesteEucard
     {
         static void Main(string[] args)
         {
-            #region ENTITY
-            Payments cocredores = new Payments();
-            /*New Object Cocredores*/
-            #endregion ENTITY
-
-            /*Set Trasactions*/ 
+            /*Set Trasactions*/
             TransactionsDAO.SetTransactions();
 
             /*SetCredores*/
             if (TransactionsDAO.SaveTransactions())
                 PaymentsDAO.SetCredores(TransactionsDAO._transactions);
 
-            /*Rastrear Trasaction e Credores*/
-            RastrearTrasactionsDAO.RastrearTrasactionAndCredores();
+            /*Fazer nova transação ou rastrear*/
+            if (PaymentsDAO.SavePayments())
+                PaymentsDAO.FazerNovaTrasaction();
+
             Console.ReadKey();
 
         }
-
-
-
     }
 }

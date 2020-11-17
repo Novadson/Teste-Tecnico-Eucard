@@ -15,13 +15,16 @@ namespace TesteEucard.Entidades
         [Column("Cnpj_Credor", TypeName = "varchar(14)")]
         public string Cnpj_Credor { get; set; }
 
+        [Column("nomecredor", TypeName = "varchar(250)")]
+        public string NomeCredor { get; set; }
+
         [Column("ValorAReceber", TypeName = "varchar(14)")]
         public decimal? ValorAReceber { get; set; }
 
         [Column("ValorAReceber", TypeName = "varchar(14)")]
         public decimal? ValorTotalRecibido { get; set; }
 
-        public string Erromessage { get; set; } = "CNPJ Inválido,por favor informe um CNPJ válido que possui 14 NÚMERO!";
+        public string Erromessage { get; set; } = "\nCNPJ Inválido,por favor informe um CNPJ válido que possui 14 NÚMERO!";
         #endregion
 
         #region ForeignKey

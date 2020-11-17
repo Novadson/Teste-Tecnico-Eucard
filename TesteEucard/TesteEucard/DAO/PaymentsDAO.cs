@@ -10,15 +10,20 @@ namespace TesteEucard.DAO
     {
         #region OBJECT AND LIST
         public static List<Payments> _ListCredores = new List<Payments>();
-        public static Payments _credores = new Payments();
         public const int qtdCredor = 2;
+        public static Payments _credores = new Payments();
         #endregion OBJECT AND LIST
 
+
+        #region SetCredores
         public static void SetCredores(Transactions transactions)
         {
             for (int i = 0; i < qtdCredor; i++)
             {
-                Console.Write($"Informe o CNPJ do Credor:");
+                Console.Write($"\n Informe o nome do Credor:");
+                _credores.NomeCredor = Console.ReadLine();
+
+                Console.Write($"\n Informe o CNPJ do Credor:");
                 _credores.Cnpj_Credor = Console.ReadLine();
 
                 /*VALIDAR CNPJ*/
@@ -30,14 +35,40 @@ namespace TesteEucard.DAO
                 _credores.ValorAReceber = transactions.ValorParcela;
                 _credores.IndetificadorTransaction = transactions.Identificador;
                 _ListCredores.Add(_credores);
+                _credores = new Payments();
             }
             _credores.ValorTotalRecibido = _ListCredores.Sum(x => x.ValorAReceber);
-            SavePayments(_ListCredores);
+            SavePayments();
         }
+        #endregion SetCredores
 
-        private static List<Payments> SavePayments(List<Payments> _listCredores)
+        #region SAVEPAYMENTS
+        public static bool SavePayments()
         {
-            return _listCredores;
+            return _ListCredores.Count > 0 ? true : false;
         }
+        #endregion SAVEPAYMENTS
+
+
+        #region FazerNovaTrasaction
+        public static void FazerNovaTrasaction()
+        {
+            Console.Write("\n Deseja rastrear a transação feita ou fazer uma nova transação? 1 para rastrear 2 para nova transação:");
+            string resposta = Console.ReadLine();
+            switch (resposta)
+            {
+                case "1":
+                    RastrearTrasactionsDAO.RastrearTrasactionAndCredores();
+                    break;
+                case "2":
+                    TransactionsDAO.SetTransactions();
+                    if (TransactionsDAO.SaveTransactions())
+                        SetCredores(TransactionsDAO._transactions);
+                    break;
+                default:
+                    break;
+            }
+        }
+        #endregion FazerNovaTrasaction
     }
 }
