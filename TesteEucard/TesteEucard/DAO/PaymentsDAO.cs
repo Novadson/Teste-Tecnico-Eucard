@@ -60,7 +60,7 @@ namespace TesteEucard.DAO
             switch (resposta)
             {
                 case "1":
-                    new RastrearTrasactionsDAO().RastrearTrasactionAndCredores();
+                    new RastrearTransactionsDAO().RastrearTrasactionAndCredores();
                     break;
                 case "2":
                     TransactionsDAO._transactions = new Transactions();

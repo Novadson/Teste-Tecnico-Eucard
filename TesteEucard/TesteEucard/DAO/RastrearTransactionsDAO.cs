@@ -6,7 +6,7 @@ using TesteEucard.Entitades;
 
 namespace TesteEucard.DAO
 {
-    public class RastrearTrasactionsDAO
+    public class RastrearTransactionsDAO
     {
         #region VARIAVEIS E OBJETOS
         public static int _Indetificador = 0;
@@ -43,15 +43,14 @@ namespace TesteEucard.DAO
 
                         Console.Write($"A soma dos valores de cada credor é: {listCredorPorTrasacao.Sum(x => x.ValorAReceber)} centavos");
                     }
+                    PaymentsDAO.FazerNovaTrasaction();
                     #endregion IMPRIMIR LISTA DE CREDORES
-
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
     }
 }
