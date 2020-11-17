@@ -19,3 +19,4 @@ C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\Tes
 C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.AssemblyInfo.cs
 C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.dll
 C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.pdb
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.csprojAssemblyReference.cache

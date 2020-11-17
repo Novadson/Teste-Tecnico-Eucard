@@ -44,7 +44,7 @@ namespace TesteEucard.DAO
 
         public static void ValidarDuplicidade(int Identificador)
         {
-            if (_ListTransactions.Count > 0 & _ListTransactions.Select(x => x.Identificador).Contains(Identificador))
+            if (_ListTransactions.Count > 0 && _ListTransactions.Select(x => x.Identificador).Contains(Identificador))
             {
                 Console.Write("\nO identificador único informado já existe,informe um outro identificador:");
                 _transactions.Identificador = Convert.ToInt32(Console.ReadLine());

@@ -36,7 +36,6 @@ namespace TesteEucard.DAO
                 _ListCredores.Add(_credores);
                 _credores = new Payments();
             }
-            _credores.ValorTotalRecibido = _ListCredores.Sum(x => x.ValorAReceber);
             SavePayments();
             transactions = new Transactions();
         }
