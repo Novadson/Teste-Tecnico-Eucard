@@ -36,7 +36,7 @@ namespace TesteEucard.DAO
         }
         #endregion SETTRANSACTIONS
 
-        #region SAVETRANSACTIONS
+        #region SAVETRANSACTIONS AND VALIDARDUPLICIDADE
         public static bool SaveTransactions()
         {
             return _ListTransactions.Count > 0 ? true : false;
@@ -50,7 +50,7 @@ namespace TesteEucard.DAO
                 _transactions.Identificador = Convert.ToInt32(Console.ReadLine());
             }
         }
-        #endregion SAVETRANSACTIONS
+        #endregion SAVETRANSACTIONS AND VALIDARDUPLICIDADE
 
     }
 }
