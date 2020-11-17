@@ -24,7 +24,7 @@ namespace TesteEucard.Entidades
         [Column("ValorAReceber", TypeName = "varchar(14)")]
         public decimal? ValorTotalRecibido { get; set; }
 
-        public string Erromessage { get; set; } = "\nCNPJ Inválido,por favor informe um CNPJ válido que possui 14 NÚMERO!";
+        public string Erromessage { get; set; } = "\nCNPJ Inválido,por favor informe um CNPJ válido que possui 14 NÚMERO!:";
         #endregion
 
         #region ForeignKey

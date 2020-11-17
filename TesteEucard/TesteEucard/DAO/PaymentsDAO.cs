@@ -10,17 +10,17 @@ namespace TesteEucard.DAO
     {
         #region OBJECT AND LIST
         public static List<Payments> _ListCredores = new List<Payments>();
-        public const int qtdCredor = 2;
-        public static Payments _credores = new Payments();
+        public const int qtdCredor = 3;
         #endregion OBJECT AND LIST
 
 
         #region SetCredores
         public static void SetCredores(Transactions transactions)
         {
-            for (int i = 0; i < qtdCredor; i++)
+            Payments _credores = new Payments();
+            for (int i = 1; i < qtdCredor; i++)
             {
-                Console.Write($"\n Informe o nome do Credor:");
+                Console.Write($"\n Informe o nome do {i}º Credor:");
                 _credores.NomeCredor = Console.ReadLine();
 
                 Console.Write($"\n Informe o CNPJ do Credor:");
@@ -29,8 +29,8 @@ namespace TesteEucard.DAO
                 /*VALIDAR CNPJ*/
                 if (!_credores.Cnpj_Credor.Trim().Length.Equals(14))
                 {
-                    Console.WriteLine(_credores.Erromessage);
-                    return;
+                    Console.Write(_credores.Erromessage);
+                    _credores.Cnpj_Credor = Console.ReadLine();
                 }
                 _credores.ValorAReceber = transactions.ValorParcela;
                 _credores.IndetificadorTransaction = transactions.Identificador;
@@ -39,12 +39,14 @@ namespace TesteEucard.DAO
             }
             _credores.ValorTotalRecibido = _ListCredores.Sum(x => x.ValorAReceber);
             SavePayments();
+            transactions = new Transactions();
         }
         #endregion SetCredores
 
         #region SAVEPAYMENTS
         public static bool SavePayments()
         {
+            FazerNovaTrasaction();
             return _ListCredores.Count > 0 ? true : false;
         }
         #endregion SAVEPAYMENTS
@@ -58,9 +60,10 @@ namespace TesteEucard.DAO
             switch (resposta)
             {
                 case "1":
-                    RastrearTrasactionsDAO.RastrearTrasactionAndCredores();
+                    new RastrearTrasactionsDAO().RastrearTrasactionAndCredores();
                     break;
                 case "2":
+                    TransactionsDAO._transactions = new Transactions();
                     TransactionsDAO.SetTransactions();
                     if (TransactionsDAO.SaveTransactions())
                         SetCredores(TransactionsDAO._transactions);

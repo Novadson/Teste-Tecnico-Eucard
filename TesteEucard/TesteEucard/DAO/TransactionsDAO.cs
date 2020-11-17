@@ -21,8 +21,9 @@ namespace TesteEucard.DAO
                 _transactions.ValorTotal *= 100; /*Valor Total em centavos E Deve ser maior que zero*/
             else
             {
-                Console.WriteLine(_transactions.Erromessage);
-                return;
+                Console.Write(_transactions.Erromessage);
+                _transactions.ValorTotal = Convert.ToDecimal(Console.ReadLine());
+                _transactions.ValorTotal *= 100;
             }
             Console.Write($"\nInforme o identificador único:");
             _transactions.Identificador = Convert.ToInt32(Console.ReadLine());

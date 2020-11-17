@@ -9,3 +9,13 @@ C:\Users\novad\OneDrive\Documentos\Eucard\TesteEucard\TesteEucard\obj\Debug\netc
 C:\Users\novad\OneDrive\Documentos\Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.AssemblyInfo.cs
 C:\Users\novad\OneDrive\Documentos\Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.dll
 C:\Users\novad\OneDrive\Documentos\Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.pdb
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.exe
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.deps.json
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.runtimeconfig.json
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.runtimeconfig.dev.json
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.dll
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\bin\Debug\netcoreapp3.0\TesteEucard.pdb
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.AssemblyInfoInputs.cache
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.AssemblyInfo.cs
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.dll
+C:\Users\novad\OneDrive\Documentos\Teste Tecnico Eucard\Teste-Tecnico-Eucard\TesteEucard\TesteEucard\obj\Debug\netcoreapp3.0\TesteEucard.pdb

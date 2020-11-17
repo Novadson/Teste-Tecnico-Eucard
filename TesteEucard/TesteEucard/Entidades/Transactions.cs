@@ -26,7 +26,7 @@ namespace TesteEucard.Entitades
         public decimal? ValorParcela { get; set; }
 
         [Column("erromessage")]
-        public string Erromessage { get; set; } = "O valor total deve ser maior que zero";
+        public string Erromessage { get; set; } = "O valor informado deve ser maior que ZERO,por favor informe um valor maior que ZERO!:";
 
         #endregion PROPRIETY
 

@@ -18,12 +18,7 @@ namespace TesteEucard
             if (TransactionsDAO.SaveTransactions())
                 PaymentsDAO.SetCredores(TransactionsDAO._transactions);
 
-            /*Fazer nova transação ou rastrear*/
-            if (PaymentsDAO.SavePayments())
-                PaymentsDAO.FazerNovaTrasaction();
-
             Console.ReadKey();
-
         }
     }
 }
